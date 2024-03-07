@@ -9,4 +9,8 @@ public class Rangée {
 		this.résultats = new Color[Modèle.DIFFICULTE];
 		this.indiceJeton = 0;
 	}
+
+	public void addJeton(Color c){
+		this.jetons[indiceJeton] = c;
+	}
 }

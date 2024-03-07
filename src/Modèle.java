@@ -14,7 +14,7 @@ public class Modèle {
 	Rangée[] propositions; 
 	int tentative;
 	
-	Random r;
+	Random r = new Random();
 	
 	public Modèle(int difficulté, int nbTentatives) {
 		Modèle.DIFFICULTE = difficulté;
@@ -22,8 +22,14 @@ public class Modèle {
 		this.état = Etat.EN_COURS;
 		this.combinaison = this.RangéeInitiale();
 		this.propositions = new Rangée[Modèle.N_TENTATIVES];
-		this.tentative = 0;
-		
+		this.tentative = 1;
+
+		// test pour l'affichage
+		Rangée r = new Rangée(); 
+		r.addJeton(Color.cyan);
+		this.propositions[0] = r; 
+
+		//
 	}
 	
 	private Rangée RangéeInitiale() {
