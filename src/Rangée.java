@@ -12,5 +12,7 @@ public class Rangée {
 
 	public void addJeton(Color c){
 		this.jetons[indiceJeton] = c;
+		indiceJeton++;
 	}
+
 }

@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +14,7 @@ public class MasterMind extends Frame implements WindowListener,ActionListener{
 		this.modèle = new Modèle(4, 10);
 		VuePropositions propositions = new VuePropositions(modèle);
 		VueClavier clavier = new VueClavier(this);
+		this.modèle.addObserver(propositions);
 		this.setLayout(new BorderLayout());
 		this.add(propositions,BorderLayout.PAGE_START);
 		this.add(clavier, BorderLayout.PAGE_END);
@@ -66,11 +68,9 @@ public class MasterMind extends Frame implements WindowListener,ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		int indiceJeton = this.modèle.propositions[modèle.tentative].indiceJeton;
-		int tentative = this.modèle.tentative;
-		Rangée rangéeActuelle = this.modèle.propositions[modèle.tentative];
 		JButton jb = (JButton) e.getSource();
+		Color colorToken = jb.getBackground();
 		//rangéeActuelle[indiceJeton] = jb.getBackground();
-		indiceJeton++;
+		modèle.ajouterJeton(colorToken);
 	}
 }

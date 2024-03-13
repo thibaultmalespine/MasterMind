@@ -1,0 +1,2 @@
+VuePropositions --> Afficher les Rangée de propositions contenu dans le fichier Modèle
+VueClavier --> MasterMind --> Modèle --> Le clic sur un bouton ajoute ça couleur à la rangée actuelle
