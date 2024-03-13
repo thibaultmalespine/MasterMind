@@ -11,7 +11,7 @@ public class VuePropositions extends Canvas implements Observer{
 	public VuePropositions(Modèle m){
 		tailleCercle = 30;
 		this.setBackground(Color.GRAY);
-		this.setSize(new Dimension(285,tailleCercle*Modèle.N_TENTATIVES));
+		this.setSize(new Dimension(285,tailleCercle*Modèle.N_TENTATIVES+tailleCercle/2*(Modèle.N_TENTATIVES+1)));
 		this.modèle = m;
 	}
 	public void paint(Graphics g) {
