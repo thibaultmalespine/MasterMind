@@ -49,9 +49,8 @@ public class VuePropositions extends Canvas implements Observer{
 	}
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
 		repaint();
+		// TODO Auto-generated method stub
 	}
-
 
 }
